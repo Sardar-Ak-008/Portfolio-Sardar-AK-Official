@@ -30,7 +30,26 @@
 @keyframes flicker{
   0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:.82} 94%{opacity:1}
 }
-body{ animation:flicker 6s infinite; }<style>
+body{ animation:flicker 6s infinite; }
+/* ===== CYBERPUNK PRO UPGRADE ===== */
+:root{ --cyan:#00fff2; --mag:#ff00d4; }
+
+.hero h1:hover, .sec-head h2:hover{
+  text-shadow:2px 0 var(--red), -2px 0 var(--cyan);
+  transition:text-shadow .15s;
+}
+
+.btn-solid{ box-shadow:0 0 12px rgba(224,35,46,.55); }
+.btn-solid:hover{ box-shadow:0 0 20px rgba(0,255,242,.6); border-color:var(--cyan); color:var(--cyan); }
+
+.op:hover{ box-shadow:inset 3px 0 0 var(--cyan); }
+.chip.live{ color:var(--cyan); border-color:rgba(0,255,242,.5); }
+
+@keyframes flicker{
+  0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:.82} 94%{opacity:1}
+}
+body{ animation:flicker 6s infinite; }
+<style>
 /* ============ FOUNDATION ============ */
 :root{
   --bg:#070708; --panel:#0d0d0f;
