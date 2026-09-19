@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>HASEEB UR REHMAN // IBS — INTELLIGENCE BLACK SQUAD</title>
-<meta name="description" content="Classified dossier of Haseeb ur Rehman — BSSE Software Engineering undergraduate, AI For Everyone (NAVTCC) cadet, founder of Intelligence Black Squad."/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23070708'/%3E%3Cpath d='M40 8a24 24 0 1 0 0 48A30 30 0 0 1 40 8z' fill='%23e0232e'/%3E%3Cpath d='M45 22l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z' fill='%23eceae6'/%3E%3C/svg%3E"/>
+<title>HASEEB UR REHMAN // IBS — INTELLIGENCE BLACK SQUAD | PAKISTAN</title>
+<meta name="description" content="Classified dossier of Haseeb ur Rehman — BSSE cadet at AUST Abbottabad, founder of Intelligence Black Squad, author of DARK PSYCHOLOGY. Contact: 03323818881 — sardarhaseeburrehman25@gmail.com"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect width='900' height='600' fill='%2301411c'/%3E%3Crect width='225' height='600' fill='%23eceae6'/%3E%3Ccircle cx='540' cy='300' r='130' fill='%23eceae6'/%3E%3Ccircle cx='572' cy='268' r='112' fill='%2301411c'/%3E%3Cpolygon points='658,134%20668.8,167.1%20703.7,167.2%20675.5,187.7%20686.2,220.8%20658,200.4%20629.8,220.8%20640.5,187.7%20612.3,167.2%20647.2,167.1' fill='%23eceae6'/%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
@@ -16,6 +16,7 @@
   --ink:#eceae6; --body:#c7c3bb; --mut:#8b877f;
   --line:rgba(236,234,230,.12); --line-soft:rgba(236,234,230,.045);
   --red:#e0232e; --red-deep:#8f161e;
+  --pak:#0e9e4f; --flag-green:#01411c;
   --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
   --disp:'Anton',Impact,sans-serif;
   --ease:cubic-bezier(.22,1,.36,1);
@@ -35,11 +36,13 @@ img,svg{display:block}
 .wrap{width:min(1180px,92%);margin-inline:auto}
 section{scroll-margin-top:90px;position:relative;z-index:1}
 .red{color:var(--red)}
+.green{color:var(--pak)}
 .sq{display:inline-block;width:7px;height:7px;background:var(--red);margin-right:.65em;flex:none}
+.sq.g{background:var(--pak)}
 .blink{animation:blink 1.1s steps(2) infinite}
 @keyframes blink{50%{opacity:0}}
 
-/* ============ ATMOSPHERE LAYERS ============ */
+/* ============ ATMOSPHERE ============ */
 .grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
   background-size:76px 76px}
@@ -48,7 +51,7 @@ section{scroll-margin-top:90px;position:relative;z-index:1}
 .noise{position:fixed;inset:0;z-index:251;pointer-events:none;opacity:.05;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-/* ============ CUSTOM CURSOR ============ */
+/* ============ CURSOR ============ */
 #cDot,#cRing{display:none}
 @media (pointer:fine){
   body,a,button,[data-hover]{cursor:none}
@@ -62,7 +65,7 @@ section{scroll-margin-top:90px;position:relative;z-index:1}
 }
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* ============ PROGRESS BAR / EDGE TAG / RADAR ============ */
+/* ============ PROGRESS / EDGE / RADAR ============ */
 #pbar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--red);z-index:900}
 .edge-tag{position:fixed;left:16px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:9px;letter-spacing:.38em;color:var(--mut);z-index:60;user-select:none}
 @media(max-width:1280px){.edge-tag{display:none}}
@@ -83,16 +86,16 @@ section{scroll-margin-top:90px;position:relative;z-index:1}
 .brand svg{width:34px;height:34px;color:var(--ink)}
 .brand-t b{font-family:var(--disp);font-weight:400;font-size:19px;letter-spacing:.06em;display:block;line-height:1}
 .brand-t span{font-size:7.5px;letter-spacing:.3em;color:var(--mut)}
-.nav-links{display:flex;gap:2.2rem}
+.nav-links{display:flex;gap:1.7rem}
 .nav-links a{font-size:10px;letter-spacing:.22em;color:var(--mut);position:relative;padding:4px 0;transition:color .25s}
 .nav-links a i{font-style:normal;color:var(--red);margin-right:.5em;font-size:8px}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--red);transition:width .3s var(--ease)}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after{width:100%}
 .nav-right{display:flex;align-items:center;gap:1.2rem;font-size:10px;letter-spacing:.18em;color:var(--mut)}
-@media(max-width:860px){.nav-links{display:none}}
+@media(max-width:960px){.nav-links{display:none}}
 
-/* ============ BOOT SEQUENCE ============ */
+/* ============ BOOT ============ */
 #boot{position:fixed;inset:0;z-index:10000;overflow:hidden}
 .bp{position:absolute;left:0;width:100%;height:50.2%;background:#050506;transition:transform .85s cubic-bezier(.85,0,.15,1)}
 .bp.t{top:0;border-bottom:2px solid var(--red)}
@@ -150,6 +153,9 @@ noscript ~ #boot{display:none}
 .et-t{top:-3px;left:50%;width:1px;height:13px}.et-b{bottom:-3px;left:50%;width:1px;height:13px}
 .et-l{left:-3px;top:50%;height:1px;width:13px}.et-r{right:-3px;top:50%;height:1px;width:13px}
 .em-cap{font-size:8.5px;letter-spacing:.3em;color:var(--mut)}
+.flag-row{display:flex;align-items:center;gap:.9rem}
+.flag-row svg{width:34px;height:auto;border:1px solid rgba(236,234,230,.25)}
+.flag-row span{font-size:8.5px;letter-spacing:.26em;color:var(--mut)}
 .readout{width:100%;font-size:10.5px;letter-spacing:.08em}
 .readout>div{display:grid;grid-template-columns:120px 1fr;gap:1rem;padding:.62rem 0;border-top:1px solid var(--line)}
 .readout dt{color:var(--mut);letter-spacing:.18em}
@@ -161,6 +167,7 @@ noscript ~ #boot{display:none}
 .marquee.rev .mq-track{animation-direction:reverse}
 .mq-in{display:flex;align-items:center;white-space:nowrap;font-family:var(--disp);font-size:clamp(1.3rem,2.6vw,1.8rem);letter-spacing:.04em;color:var(--ink)}
 .mq-in .w-red{color:var(--red)}
+.mq-in .w-green{color:var(--pak)}
 .mq-star{color:var(--red);font-size:.75em;margin:0 1.1em}
 @keyframes mq{to{transform:translateX(-50%)}}
 
@@ -171,8 +178,6 @@ noscript ~ #boot{display:none}
 .sec-head h2{font-family:var(--disp);font-weight:400;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1;color:var(--ink);letter-spacing:.01em}
 .sec-sub{font-size:10px;letter-spacing:.24em;color:var(--mut);margin-top:.7rem}
 .sec-meta{margin-left:auto;font-size:10px;letter-spacing:.24em;color:var(--mut);padding-bottom:.6rem}
-
-/* reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.vis{opacity:1;transform:none}
 
@@ -198,7 +203,18 @@ noscript ~ #boot{display:none}
 .loadout{font-size:11px;letter-spacing:.14em;color:var(--body);border-top:1px solid var(--line);padding-top:1.4rem}
 .loadout span{color:var(--red)}
 
-/* ============ 02 OPERATIONS ============ */
+/* ============ 02 TRAINING (GREEN) ============ */
+.rec-list{border-bottom:1px solid var(--line)}
+.rec{display:grid;grid-template-columns:92px 1fr 200px;gap:1.6rem;align-items:center;padding:1.7rem 0;border-top:1px solid var(--line);position:relative;transition:background .3s}
+.rec::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--pak);transform:scaleY(0);transform-origin:top;transition:transform .3s var(--ease)}
+.rec:hover{background:rgba(14,158,79,.07)}
+.rec:hover::before{transform:scaleY(1)}
+.rec-id{font-size:10px;letter-spacing:.2em;color:var(--pak)}
+.rec h3{font-family:var(--disp);font-weight:400;font-size:clamp(1.15rem,2.4vw,1.55rem);color:var(--ink);letter-spacing:.03em}
+.rec-body p{font-size:10px;letter-spacing:.18em;color:var(--mut);margin-top:.35rem}
+.rec-end{display:flex;flex-direction:column;align-items:flex-end;gap:.6rem}
+
+/* ============ 03 OPERATIONS ============ */
 .ops{border-bottom:1px solid var(--line)}
 .op{display:grid;grid-template-columns:110px 1fr 190px 56px;gap:2rem;align-items:center;padding:2.7rem 0;border-top:1px solid var(--line);position:relative;transition:background .35s}
 .op::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red);transform:scaleY(0);transform-origin:top;transition:transform .35s var(--ease)}
@@ -207,7 +223,7 @@ noscript ~ #boot{display:none}
 .op-idx{font-family:var(--disp);font-size:3rem;line-height:1;color:transparent;-webkit-text-stroke:1px var(--mut);transition:.35s}
 .op:hover .op-idx{-webkit-text-stroke:1px var(--red)}
 .op h3{font-family:var(--disp);font-weight:400;font-size:clamp(1.7rem,4vw,3rem);line-height:1.05;color:var(--ink);letter-spacing:.015em}
-.op-role{display:flex;align-items:center;gap:1rem;font-size:10px;letter-spacing:.22em;color:var(--body);margin-top:.7rem}
+.op-role{display:flex;align-items:center;gap:1rem;font-size:10px;letter-spacing:.22em;color:var(--body);margin-top:.7rem;flex-wrap:wrap}
 .tag-live{display:inline-flex;align-items:center;color:var(--red);letter-spacing:.18em}
 .op-desc{margin-top:1rem;font-size:12.5px;line-height:1.95;max-width:62ch;color:#aca89f}
 .op-side{display:flex;flex-direction:column;align-items:flex-end;gap:.9rem;font-size:9.5px;letter-spacing:.22em;color:var(--mut);text-align:right}
@@ -217,7 +233,7 @@ noscript ~ #boot{display:none}
 .ops-note{margin-top:1.6rem;font-size:9px;letter-spacing:.24em;color:var(--mut)}
 .ops-note b{color:var(--red);font-weight:400}
 
-/* ============ 03 PROTOCOLS ============ */
+/* ============ 04 PROTOCOLS ============ */
 .prt-list{border-bottom:1px solid var(--line)}
 .prt{display:grid;grid-template-columns:92px 1fr 200px;gap:1.6rem;align-items:center;padding:1.7rem 0;border-top:1px solid var(--line);position:relative;transition:background .3s}
 .prt::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red);transform:scaleY(0);transform-origin:top;transition:transform .3s var(--ease)}
@@ -229,16 +245,42 @@ noscript ~ #boot{display:none}
 .prt-end{display:flex;flex-direction:column;align-items:flex-end;gap:.6rem}
 .chip{display:inline-flex;align-items:center;font-size:9px;letter-spacing:.22em;color:var(--ink);border:1px solid var(--line);padding:.42em .9em;white-space:nowrap}
 .chip.live{color:var(--red);border-color:rgba(224,35,46,.5)}
-.pct{font-family:var(--disp);font-size:1.5rem;color:var(--red);line-height:1}
-.bar{margin-top:1rem;height:7px;border:1px solid var(--line);position:relative;background:repeating-linear-gradient(90deg,transparent 0 23px,rgba(236,234,230,.1) 23px 24px)}
-.bar i{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--red);transition:width 1.5s var(--ease)}
+.chip.pak{color:var(--pak);border-color:rgba(14,158,79,.5)}
 
-/* ============ 04 TRANSMISSIONS ============ */
+/* ============ 05 HONOR ROLL ============ */
+.nation{display:grid;grid-template-columns:240px 1fr;gap:clamp(1.6rem,4vw,3rem);align-items:center;border:1px solid var(--line);padding:clamp(1.6rem,3.5vw,2.6rem);background:linear-gradient(135deg,rgba(14,158,79,.10),rgba(224,35,46,.04) 60%,transparent);margin-bottom:clamp(2rem,4vw,3rem)}
+.n-flag{display:flex;flex-direction:column;gap:.9rem}
+.n-flag svg{width:100%;height:auto;border:1px solid rgba(236,234,230,.3);box-shadow:0 16px 44px rgba(0,0,0,.55)}
+.n-cap{font-size:8.5px;letter-spacing:.26em;color:var(--mut)}
+.n-kicker{font-size:10px;letter-spacing:.28em;color:var(--pak);display:flex;align-items:center;margin-bottom:1rem}
+.n-title{font-family:var(--disp);font-weight:400;font-size:clamp(1.8rem,4vw,3rem);color:var(--ink);line-height:1.05}
+.n-info>p{margin-top:1.1rem;font-size:12.5px;line-height:1.95;max-width:60ch;color:var(--body)}
+.n-badges{display:flex;gap:2.2rem;margin-top:1.8rem;flex-wrap:wrap}
+.n-badge{display:flex;align-items:center;gap:.9rem;font-size:8.5px;letter-spacing:.2em;color:var(--mut);line-height:1.7}
+.n-badge svg{width:56px;height:56px;color:var(--pak);flex:none}
+.honor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.hcard{position:relative;border:1px solid var(--line);background:var(--panel);padding:2.4rem 1.6rem 1.8rem;transition:border-color .3s,transform .3s var(--ease)}
+.hcard:hover{border-color:var(--pak);transform:translateY(-5px)}
+.hcard .hc-badge{width:84px;height:84px;color:var(--pak);margin-bottom:1.4rem}
+.hcard .hc-badge.big{width:96px;height:96px}
+.hcard .hc-badge.ignis{color:var(--red)}
+.hcard h3{font-family:var(--disp);font-weight:400;font-size:1.45rem;color:var(--ink);letter-spacing:.03em;line-height:1.15}
+.hcard .hc-role{font-size:9px;letter-spacing:.24em;color:var(--pak);margin-top:.6rem}
+.hcard .hc-role.ignis{color:var(--red)}
+.hcard .hc-note{font-size:12px;line-height:1.9;color:var(--body);margin-top:1rem}
+.hcard .hc-tag{position:absolute;top:1rem;right:1rem;font-size:8.5px;letter-spacing:.22em;color:var(--mut);border:1px solid var(--line);padding:.3em .7em}
+.hcard.featured{border-color:rgba(14,158,79,.5);background:linear-gradient(160deg,rgba(14,158,79,.10),transparent 55%)}
+.hcard.ignis:hover{border-color:var(--red)}
+.honor-note{margin-top:1.6rem;font-size:9px;letter-spacing:.24em;color:var(--mut)}
+.honor-note b{color:var(--pak);font-weight:400}
+
+/* ============ 06 TRANSMISSIONS ============ */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
 .contact-big{font-family:var(--disp);font-weight:400;font-size:clamp(2.8rem,7.5vw,6rem);line-height:.98;color:var(--ink);letter-spacing:.01em}
 .contact-big span{display:block}
 .contact-big .cw{color:var(--red)}
 .contact-note{margin-top:1.8rem;font-size:11px;line-height:2;max-width:42ch;color:var(--body)}
+.contact-note b{color:var(--ink);font-weight:500}
 .xlinks{border-bottom:1px solid var(--line)}
 .xlink{display:grid;grid-template-columns:44px 96px 1fr 34px;gap:1rem;align-items:center;padding:1.45rem .8rem;border-top:1px solid var(--line);color:var(--ink);transition:background .25s,color .25s}
 .xlink .xl-i{font-size:10px;color:var(--red);transition:color .25s}
@@ -265,10 +307,11 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
 .f-brand svg.mh{width:44px;height:44px}
 .f-brand b{font-family:var(--disp);font-weight:400;font-size:20px;letter-spacing:.06em;display:block;line-height:1.1}
 .f-brand span{font-size:7.5px;letter-spacing:.3em;color:var(--mut)}
-.f-mid{display:flex;flex-direction:column;align-items:center;gap:.3rem;font-size:10.5px;letter-spacing:.2em;color:var(--body)}
+.f-mid{display:flex;flex-direction:column;align-items:center;gap:.3rem;font-size:10.5px;letter-spacing:.2em;color:var(--body);text-align:center}
 .f-mid .pkt{color:var(--red)}
+.f-mid .f-contact{font-size:9px;color:var(--mut)}
 .f-flag{display:flex;align-items:center;gap:.9rem;font-size:10px;letter-spacing:.28em;color:var(--ink)}
-.f-flag svg{width:22px;height:22px;color:var(--red)}
+.f-flag svg{width:38px;height:25px;border:1px solid var(--line)}
 .f-bottom{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid var(--line-soft);font-size:9px;letter-spacing:.2em;color:var(--mut)}
 
 /* ============ RESPONSIVE ============ */
@@ -279,17 +322,20 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
   .readout>div{grid-template-columns:118px 1fr}
   .dossier-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
+  .nation{grid-template-columns:1fr}
+  .n-flag{max-width:260px}
 }
 @media(max-width:860px){
   .op{grid-template-columns:1fr;gap:1.1rem;padding:2.2rem 0}
   .op-idx{font-size:2rem}
   .op-side{flex-direction:row;justify-content:space-between;align-items:center;width:100%;text-align:left}
   .op-arrow{display:none}
-  .prt{grid-template-columns:1fr;gap:.8rem}
-  .prt-end{flex-direction:row;justify-content:space-between;width:100%;align-items:center}
+  .prt,.rec{grid-template-columns:1fr;gap:.8rem}
+  .prt-end,.rec-end{flex-direction:row;justify-content:space-between;width:100%;align-items:center}
   .scroll-cue{display:none}
   .xlink{grid-template-columns:36px 1fr 30px}
   .xlink .xl-k{display:none}
+  .honor-grid{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
@@ -299,12 +345,12 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
 </head>
 <body class="locked">
 
-<!-- ======= BOOT / ACCESS SEQUENCE ======= -->
+<!-- ======= BOOT ======= -->
 <div id="boot">
   <div class="bp t"></div>
   <div class="bp b"></div>
   <div class="bcore">
-    <span class="b-meta l">IBS-OS // RESTRICTED ACCESS</span>
+    <span class="b-meta l">IBS-OS // RESTRICTED ACCESS — ABBOTTABAD STATION</span>
     <span class="b-meta r blink">&#9679; REC</span>
     <div class="bterm" id="bterm" aria-hidden="true"></div>
     <div class="stamp" id="stamp">ACCESS GRANTED</div>
@@ -318,17 +364,16 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
 <div class="grid-bg" aria-hidden="true"></div>
 <div class="scanlines" aria-hidden="true"></div>
 <div class="noise" aria-hidden="true"></div>
-<aside class="edge-tag" aria-hidden="true">IBS — INTELLIGENCE BLACK SQUAD &#9733; CLASSIFIED CHANNEL &#9733; 33.68&#176;N 73.04&#176;E</aside>
+<aside class="edge-tag" aria-hidden="true">IBS — INTELLIGENCE BLACK SQUAD &#9733; NAWANSHEHR — ABBOTTABAD &#9733; 34.16&#176;N 73.22&#176;E</aside>
 
 <div class="radar" aria-hidden="true">
   <div class="r-sweep"></div>
   <span class="blip" style="left:30%;top:40%"></span>
   <span class="blip" style="left:66%;top:62%;animation-delay:.7s"></span>
   <span class="blip" style="left:52%;top:26%;animation-delay:1.3s"></span>
-  <span class="r-lbl">PK-GRID // SWEEP</span>
+  <span class="r-lbl">PK-GRID // ABBOTTABAD SWEEP</span>
 </div>
 
-<!-- custom cursor -->
 <div id="cDot" aria-hidden="true"></div>
 <div id="cRing" aria-hidden="true">
   <div class="ci">
@@ -355,9 +400,11 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
     </a>
     <nav class="nav-links">
       <a href="#dossier"><i>01</i>DOSSIER</a>
-      <a href="#ops"><i>02</i>OPERATIONS</a>
-      <a href="#protocols"><i>03</i>PROTOCOLS</a>
-      <a href="#transmit"><i>04</i>TRANSMIT</a>
+      <a href="#training"><i>02</i>TRAINING</a>
+      <a href="#ops"><i>03</i>OPERATIONS</a>
+      <a href="#protocols"><i>04</i>PROTOCOLS</a>
+      <a href="#honors"><i>05</i>HONORS</a>
+      <a href="#transmit"><i>06</i>TRANSMIT</a>
     </nav>
     <div class="nav-right"><span class="pkt">--:--:-- PKT</span></div>
   </div>
@@ -368,16 +415,17 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
   <section class="hero" id="hero">
     <div class="wrap hero-grid" style="position:relative">
       <div>
-        <p class="eyebrow h-anim" style="transition-delay:.05s"><span class="sq blink"></span>IBS INTERNAL // DOSSIER 001 — EYES ONLY</p>
+        <p class="eyebrow h-anim" style="transition-delay:.05s"><span class="sq blink"></span>IBS INTERNAL // DOSSIER 001 — NAWANSHEHR, ABBOTTABAD — PK</p>
         <h1>
           <span class="line l1 h-anim" style="transition-delay:.12s"><span id="hL1">HASEEB</span></span>
           <span class="line l2 h-anim" style="transition-delay:.2s"><span id="hL2">UR REHMAN</span><span class="blk"></span></span>
         </h1>
         <div class="h-rule h-anim" style="transition-delay:.28s"></div>
         <p class="h-sub h-anim" style="transition-delay:.34s">
-          21. Pakistan. <b>Software Engineering undergraduate (BSSE)</b> decoding systems one commit
-          at a time — and founder of <b>INTELLIGENCE BLACK SQUAD</b>, a private doctrine for building
-          disciplined, intelligent software. Current assignment: <b class="red">AI FOR EVERYONE · NAVTCC</b>.
+          21. Pakistan. <b>BSSE Software Engineering cadet — Semester 03, Abbottabad University of
+          Science &amp; Technology (AUST)</b> — and founder of <b>INTELLIGENCE BLACK SQUAD</b>, author
+          of its flagship doctrine <b>DARK PSYCHOLOGY</b>. Field-tested in <b>cosmetic sales &amp;
+          network marketing</b>. Current assignment: <b class="red">AI FOR EVERYONE &#183; NAVTTC</b>.
         </p>
         <div class="h-cta h-anim" style="transition-delay:.42s">
           <a class="btn btn-solid" href="#ops" data-hover>VIEW OPERATION LOG
@@ -392,9 +440,8 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
         <div class="emblem h-anim" style="transition-delay:.2s" data-hover>
           <svg class="ring-text" viewBox="0 0 200 200" aria-hidden="true">
             <defs><path id="circ" d="M100 100 m-84 0 a84 84 0 1 1 168 0 a84 84 0 1 1 -168 0"/></defs>
-            <text><textPath href="#circ" textLength="527" lengthAdjust="spacingAndGlyphs">INTELLIGENCE BLACK SQUAD &#9733; MARKHOR PROTOCOL &#9733; PAKISTAN &#9733;</textPath></text>
+            <text><textPath href="#circ" textLength="527" lengthAdjust="spacingAndGlyphs">INTELLIGENCE BLACK SQUAD &#9733; MARKHOR PROTOCOL &#9733; PAKISTAN ZINDABAD &#9733;</textPath></text>
           </svg>
-          <!-- MARKHOR SIGIL -->
           <svg class="markhor" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-label="Markhor — sigil of Intelligence Black Squad">
             <path d="M113 52 C122 36 143 30 154 42 C165 54 159 74 145 74 C135 74 131 62 139 57 C144 54 149 58 147 63"/>
             <path d="M87 52 C78 36 57 30 46 42 C35 54 41 74 55 74 C65 74 69 62 61 57 C56 54 51 58 53 63"/>
@@ -412,12 +459,23 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
         </div>
         <span class="em-cap h-anim" style="transition-delay:.26s">MARKHOR // SQUAD SIGIL — PAKISTAN</span>
 
-        <!-- personnel data readout -->
+        <div class="flag-row h-anim" style="transition-delay:.3s">
+          <svg viewBox="0 0 900 600" role="img" aria-label="Flag of Pakistan">
+            <rect width="900" height="600" fill="#01411c"/>
+            <rect width="225" height="600" fill="#eceae6"/>
+            <circle cx="540" cy="300" r="130" fill="#eceae6"/>
+            <circle cx="572" cy="268" r="112" fill="#01411c"/>
+            <polygon points="658,134 668.8,167.1 703.7,167.2 675.5,187.7 686.2,220.8 658,200.4 629.8,220.8 640.5,187.7 612.3,167.2 647.2,167.1" fill="#eceae6"/>
+          </svg>
+          <span>ISLAMIC REPUBLIC OF PAKISTAN</span>
+        </div>
+
         <dl class="readout h-anim" style="transition-delay:.34s">
           <div><dt>DESIGNATION</dt><dd>SOFTWARE ENGINEER — CADET</dd></div>
           <div><dt>AGE</dt><dd>21 YRS</dd></div>
-          <div><dt>BASE</dt><dd>PAKISTAN // 33.68&#176;N 73.04&#176;E</dd></div>
-          <div><dt>CURRENT OP</dt><dd>AI FOR EVERYONE — NAVTCC</dd></div>
+          <div><dt>BASE</dt><dd>NAWANSHEHR — ABBOTTABAD // KPK</dd></div>
+          <div><dt>ACADEMY</dt><dd>AUST — BSSE SEM-03</dd></div>
+          <div><dt>CONTACT</dt><dd>0332-3818881</dd></div>
           <div><dt>SQUAD</dt><dd>IBS — FOUNDER</dd></div>
           <div><dt>STATUS</dt><dd><span class="sq blink"></span>ACTIVE — COMPILING</dd></div>
         </dl>
@@ -428,8 +486,8 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
   <!-- ======= MARQUEE ======= -->
   <div class="marquee" aria-hidden="true">
     <div class="mq-track">
-      <span class="mq-in">INTELLIGENCE BLACK SQUAD<span class="mq-star">&#9733;</span><span class="w-red">HASEEB UR REHMAN</span><span class="mq-star">&#9733;</span>MARKHOR PROTOCOL<span class="mq-star">&#9733;</span><span class="w-red">BSSE</span><span class="mq-star">&#9733;</span>AI FOR EVERYONE<span class="mq-star">&#9733;</span><span class="w-red">PAKISTAN</span><span class="mq-star">&#9733;</span></span>
-      <span class="mq-in">INTELLIGENCE BLACK SQUAD<span class="mq-star">&#9733;</span><span class="w-red">HASEEB UR REHMAN</span><span class="mq-star">&#9733;</span>MARKHOR PROTOCOL<span class="mq-star">&#9733;</span><span class="w-red">BSSE</span><span class="mq-star">&#9733;</span>AI FOR EVERYONE<span class="mq-star">&#9733;</span><span class="w-red">PAKISTAN</span><span class="mq-star">&#9733;</span></span>
+      <span class="mq-in">INTELLIGENCE BLACK SQUAD<span class="mq-star">&#9733;</span><span class="w-red">HASEEB UR REHMAN</span><span class="mq-star">&#9733;</span>DARK PSYCHOLOGY<span class="mq-star">&#9733;</span><span class="w-red">BSSE — AUST</span><span class="mq-star">&#9733;</span>AI FOR EVERYONE<span class="mq-star">&#9733;</span><span class="w-green">PAKISTAN ZINDABAD</span><span class="mq-star">&#9733;</span></span>
+      <span class="mq-in">INTELLIGENCE BLACK SQUAD<span class="mq-star">&#9733;</span><span class="w-red">HASEEB UR REHMAN</span><span class="mq-star">&#9733;</span>DARK PSYCHOLOGY<span class="mq-star">&#9733;</span><span class="w-red">BSSE — AUST</span><span class="mq-star">&#9733;</span>AI FOR EVERYONE<span class="mq-star">&#9733;</span><span class="w-green">PAKISTAN ZINDABAD</span><span class="mq-star">&#9733;</span></span>
     </div>
   </div>
 
@@ -438,8 +496,8 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="sec-idx">[ 01 ]</span>
-        <div><h2 data-scramble>PERSONNEL FILE</h2><p class="sec-sub">DECLASSIFIED — SUBJECT: HASEEB UR REHMAN</p></div>
-        <span class="sec-meta">FILE 01 / 04</span>
+        <div><h2 data-scramble>PERSONNEL FILE</h2><p class="sec-sub">DECLASSIFIED — SUBJECT: HASEEB UR REHMAN // ABBOTTABAD, PK</p></div>
+        <span class="sec-meta">FILE 01 / 06</span>
       </div>
 
       <div class="dossier-grid">
@@ -447,9 +505,12 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
           <dl class="meta">
             <div><dt>FILE</dt><dd>IBS / 001</dd></div>
             <div><dt>SUBJECT</dt><dd>HASEEB UR REHMAN</dd></div>
+            <div><dt>FATHER</dt><dd>MUHAMMAD NAEEM</dd></div>
             <div><dt>AGE</dt><dd>21</dd></div>
-            <div><dt>ORIGIN</dt><dd>PAKISTAN</dd></div>
-            <div><dt>TRACK</dt><dd>BSSE — SOFTWARE ENGINEERING</dd></div>
+            <div><dt>ORIGIN</dt><dd>NAWANSHEHR — ABBOTTABAD</dd></div>
+            <div><dt>TRACK</dt><dd>BSSE — AUST SEM-03</dd></div>
+            <div><dt>CONTACT</dt><dd>0332-3818881</dd></div>
+            <div><dt>LANGUAGES</dt><dd>04 ACTIVE</dd></div>
             <div><dt>CLEARANCE</dt><dd class="red">LEVEL-5 FOUNDER</dd></div>
             <div><dt>STATUS</dt><dd><span class="sq blink"></span>ACTIVE</dd></div>
           </dl>
@@ -459,17 +520,23 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
 
         <div class="doc reveal" style="transition-delay:.12s">
           <p>
-            Haseeb ur Rehman — 21, Software Engineering undergraduate operating out of Pakistan.
-            Days are spent dissecting data structures, object-oriented design and the software
-            development lifecycle; nights belong to <b>Intelligence Black Squad</b>, the initiative
-            he founded on a single doctrine: intelligence is a protocol, not a product.
+            Haseeb ur Rehman — 21, stationed in Nawanshehr, Abbottabad, Khyber Pakhtunkhwa.
+            Currently a <b>3rd-semester BS Software Engineering undergraduate at Abbottabad
+            University of Science &amp; Technology (AUST)</b> — dissecting data structures,
+            object-oriented design and the software development lifecycle, one commit at a time.
           </p>
           <p>
-            Currently enlisted in <b>AI FOR EVERYONE</b> by <b>NAVTCC</b> — mapping machine learning
-            fundamentals, neural network intuition and the ethics of intelligent systems, then folding
-            every lesson into the squad playbook. Field service includes deployments with
-            <span class="redacted">Paranox Technologies</span> and <span class="redacted">AHR Studio</span>,
-            where production code, real deadlines and honest code reviews shaped the operator he is becoming.
+            The field years came first: <b>~5 years across online business &amp; network marketing</b> —
+            building a personal client network across Pakistan and closing deals through
+            <b>JazzCash &amp; Easypaisa</b> — plus front-line duty as a professional
+            <b>cosmetic salesman</b>, commended as the counter&rsquo;s best. Persuasion, negotiation
+            and customer psychology: mastered live on the floor, not in theory.
+          </p>
+          <p>
+            Then the doctrine: under the banner he founded — <b>Intelligence Black Squad</b> — he
+            authored the squad&rsquo;s flagship title, <span class="redacted">DARK PSYCHOLOGY</span>,
+            ranked <b>No.1 in the IBS archive</b>: a field manual on influence, mind-reading and
+            mental self-defence. Every sale, every book, every line of code feeds the same protocol.
           </p>
 
           <blockquote class="doctrine">
@@ -477,128 +544,325 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
             <cite>&mdash; IBS DOCTRINE // LINE 000</cite>
           </blockquote>
 
-          <p class="loadout"><span>LOADOUT //</span> C++ &middot; PYTHON &middot; JAVA &middot; SQL &middot; HTML/CSS &middot; JAVASCRIPT &middot; GIT &middot; LINUX</p>
+          <p class="loadout">
+            <span>FLAGSHIP //</span> DARK PSYCHOLOGY — FOUNDER &amp; AUTHOR<br/>
+            <span>LANGUAGES //</span> URDU &#183; HINDKO &#183; ENGLISH &#183; PUNJABI<br/>
+            <span>OFF-DUTY //</span> MUSIC &#183; BOOKS &#183; TOURISM &#183; TECH EXPLORATION &#183; ONLINE GAMES
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======= 02 OPERATION LOG ======= -->
-  <section class="sec" id="ops">
+  <!-- ======= 02 TRAINING RECORD ======= -->
+  <section class="sec" id="training">
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="sec-idx">[ 02 ]</span>
-        <div><h2 data-scramble>OPERATION LOG</h2><p class="sec-sub">FIELD RECORD — 2 UNITS DEPLOYED</p></div>
-        <span class="sec-meta">FILE 02 / 04</span>
+        <div><h2 data-scramble>TRAINING RECORD</h2><p class="sec-sub">ACADEMIC &amp; CERTIFICATION PIPELINE — GREEN CHANNEL VERIFIED</p></div>
+        <span class="sec-meta">FILE 02 / 06</span>
+      </div>
+
+      <div class="rec-list">
+        <div class="rec reveal" data-hover>
+          <span class="rec-id">TRN-01</span>
+          <div class="rec-body">
+            <h3>BS SOFTWARE ENGINEERING — BSSE</h3>
+            <p>ABBOTTABAD UNIVERSITY OF SCIENCE &amp; TECHNOLOGY (AUST) &#183; SEMESTER 03</p>
+          </div>
+          <div class="rec-end"><span class="chip pak"><span class="sq g blink"></span>IN PROGRESS</span></div>
+        </div>
+
+        <div class="rec reveal" data-hover>
+          <span class="rec-id">TRN-02</span>
+          <div class="rec-body">
+            <h3>AI FOR EVERYONE — NAVTTC</h3>
+            <p>THE LEADER COLLEGE OF SCIENCE &amp; TECHNOLOGY &#183; SULTANPUR, HAVELIAN</p>
+          </div>
+          <div class="rec-end"><span class="chip pak"><span class="sq g blink"></span>IN PROGRESS</span></div>
+        </div>
+
+        <div class="rec reveal" data-hover>
+          <span class="rec-id">TRN-03</span>
+          <div class="rec-body">
+            <h3>FSC — PRE-ENGINEERING</h3>
+            <p>GATEWAY INTERNATIONAL PUBLIC SCHOOL &amp; COLLEGE &#183; MANDIA, ABBOTTABAD</p>
+          </div>
+          <div class="rec-end"><span class="chip"><span class="sq"></span>CLEARED</span></div>
+        </div>
+
+        <div class="rec reveal" data-hover>
+          <span class="rec-id">TRN-04</span>
+          <div class="rec-body">
+            <h3>3-YEAR COMPUTER DIPLOMA</h3>
+            <p>DAR-UL-BANAT PUBLIC SCHOOL &#183; AFFILIATED: C.D.I ACADEMY</p>
+          </div>
+          <div class="rec-end"><span class="chip"><span class="sq"></span>CLEARED</span></div>
+        </div>
+
+        <div class="rec reveal" data-hover>
+          <span class="rec-id">TRN-05</span>
+          <div class="rec-body">
+            <h3>MATRICULATION</h3>
+            <p>DAR-UL-BANAT PUBLIC SCHOOL &#183; CHOONA KARI, NAWANSHEHR, ABBOTTABAD</p>
+          </div>
+          <div class="rec-end"><span class="chip"><span class="sq"></span>CLEARED</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 03 OPERATION LOG ======= -->
+  <section class="sec" id="ops">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-idx">[ 03 ]</span>
+        <div><h2 data-scramble>OPERATION LOG</h2><p class="sec-sub">FIELD RECORD — 3 UNITS DEPLOYED</p></div>
+        <span class="sec-meta">FILE 03 / 06</span>
       </div>
 
       <div class="ops">
-        <!-- EDIT ME: swap roles / periods with your real titles & dates -->
         <article class="op reveal" data-hover>
           <div class="op-idx">001</div>
           <div class="op-main">
-            <h3 data-scramble>PARANOX TECHNOLOGIES</h3>
-            <p class="op-role">SOFTWARE ENGINEERING UNIT — FIELD OPERATIVE
-              <span class="tag-live"><span class="sq blink"></span>DEPLOYED</span></p>
-            <p class="op-desc">Operating inside live production codebases — shipping features, patching
-              defects and running debug drills under real deadlines. Learned the unglamorous half of
-              engineering: reading other people&rsquo;s code, surviving code review, and never trusting
-              user input. <br/>CLASSIFIED CONTRIBUTIONS:
-              <span class="redacted">module architecture</span> &#183;
-              <span class="redacted">API integration</span> &#183;
-              <span class="redacted">test pipelines</span></p>
+            <h3 data-scramble>DARK PSYCHOLOGY — THE BOOK</h3>
+            <p class="op-role">IBS PUBLICATIONS — FOUNDER &amp; AUTHOR
+              <span class="tag-live"><span class="sq blink"></span>FLAGSHIP</span></p>
+            <p class="op-desc">The squad&rsquo;s core doctrine, written and compiled under the
+              Intelligence Black Squad banner — a deep field manual on dark psychology: influence,
+              persuasion, reading people and mental self-defence. Authored, structured and published
+              as the No.1 ranked title of the IBS archive.
+              <br/>CHAPTERS OF RECORD:
+              <span class="redacted">persuasion protocols</span> &#183;
+              <span class="redacted">mind-reading drills</span> &#183;
+              <span class="redacted">defence doctrine</span></p>
           </div>
-          <div class="op-side"><span>DEPLOYMENT<br/>ACTIVE DUTY</span></div>
+          <div class="op-side"><span>IBS ARCHIVE<br/>No.1 — FLAGSHIP TITLE</span></div>
           <div class="op-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
         </article>
 
         <article class="op reveal" data-hover>
           <div class="op-idx">002</div>
           <div class="op-main">
-            <h3 data-scramble>AHR STUDIO</h3>
-            <p class="op-role">DESIGN-ENGINEERING LIAISON
+            <h3 data-scramble>ONLINE BUSINESS &amp; NETWORK MARKETING</h3>
+            <p class="op-role">INDEPENDENT CONSULTANT — DIGITAL OUTREACH
               <span class="tag-live"><span class="sq blink"></span>DEPLOYED</span></p>
-            <p class="op-desc">Studio rotation where code meets craft — building interfaces end-to-end,
-              translating design intent into pixel-accurate responsive builds, and enforcing the one
-              rule the squad never breaks: detail is not optional. <br/>FIELD NOTES:
-              <span class="redacted">landing systems</span> &#183;
-              <span class="redacted">UI componentry</span> &#183;
-              <span class="redacted">performance passes</span></p>
+            <p class="op-desc">~5 years operating across Pakistan&rsquo;s online marketplace — built and
+              managed a personal client network through direct communication and digital outreach.
+              Deals closed and settled through mobile payment rails (<b>JazzCash &#183; Easypaisa</b>).
+              Pitches adapted to every customer segment for conversion and repeat business.
+              <br/>FIELD SKILLS:
+              <span class="redacted">client acquisition</span> &#183;
+              <span class="redacted">negotiation</span> &#183;
+              <span class="redacted">retention ops</span></p>
           </div>
-          <div class="op-side"><span>DEPLOYMENT<br/>ACTIVE DUTY</span></div>
+          <div class="op-side"><span>FIELD RECORD<br/>~5 YEARS ACTIVE</span></div>
+          <div class="op-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        </article>
+
+        <article class="op reveal" data-hover>
+          <div class="op-idx">003</div>
+          <div class="op-main">
+            <h3 data-scramble>COSMETIC SALES DIVISION</h3>
+            <p class="op-role">COSMETICS RETAIL — FRONT-LINE SALES
+              <span class="tag-live"><span class="sq blink"></span>DEPLOYED</span></p>
+            <p class="op-desc">Professional floor duty — direct customer interaction, product
+              presentation and in-store sales for cosmetic lines. Customer service, stock handling
+              and point-of-sale operations mastered live. Commended as the counter&rsquo;s
+              <b>best professional salesman</b>.
+              <br/>FIELD SKILLS:
+              <span class="redacted">product presentation</span> &#183;
+              <span class="redacted">POS operations</span> &#183;
+              <span class="redacted">customer service</span></p>
+          </div>
+          <div class="op-side"><span>COMMENDATION<br/>BEST SALESMAN</span></div>
           <div class="op-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
         </article>
       </div>
-      <p class="ops-note reveal"><b>//</b> FURTHER OPERATIONS UNDER RECRUITMENT — NEW DEPLOYMENTS INBOUND</p>
+      <p class="ops-note reveal"><b>//</b> NEXT DEPLOYMENT — SOFTWARE ENGINEERING FIELD UNIT: AUST PIPELINE IN PROGRESS</p>
     </div>
   </section>
 
-  <!-- ======= 03 ACTIVE PROTOCOLS ======= -->
+  <!-- ======= 04 ACTIVE PROTOCOLS ======= -->
   <section class="sec" id="protocols">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="sec-idx">[ 03 ]</span>
+        <span class="sec-idx">[ 04 ]</span>
         <div><h2 data-scramble>ACTIVE PROTOCOLS</h2><p class="sec-sub">MANIFEST OF CAPABILITIES — IBS STANDARD</p></div>
-        <span class="sec-meta">FILE 03 / 04</span>
+        <span class="sec-meta">FILE 04 / 06</span>
       </div>
 
       <div class="prt-list">
         <div class="prt reveal" data-hover>
           <span class="prt-id">PRT-01</span>
-          <div class="prt-body"><h3>SOFTWARE ENGINEERING CORE</h3><p>OOP &#183; DSA &#183; SDLC &#183; SYSTEM DESIGN</p></div>
-          <div class="prt-end"><span class="chip"><span class="sq"></span>ACTIVE</span></div>
+          <div class="prt-body"><h3>SALES &amp; PERSUASION</h3><p>CLOSING &#183; NEGOTIATION &#183; CUSTOMER PSYCHOLOGY</p></div>
+          <div class="prt-end"><span class="chip live"><span class="sq blink"></span>CORE WEAPON</span></div>
         </div>
 
-        <!-- EDIT ME: change data-fill / data-count to your real course progress -->
         <div class="prt reveal" data-hover>
           <span class="prt-id">PRT-02</span>
-          <div class="prt-body">
-            <h3>AI FOUNDATIONS — &ldquo;AI FOR EVERYONE&rdquo;</h3>
-            <p>NAVTCC &#183; ML FUNDAMENTALS &#183; NEURAL NETWORKS &#183; AI ETHICS</p>
-            <div class="bar"><i data-fill="68"></i></div>
-          </div>
-          <div class="prt-end">
-            <span class="chip live"><span class="sq blink"></span>IN PROGRESS</span>
-            <span class="pct" data-count="68" data-suf="%">0%</span>
-          </div>
+          <div class="prt-body"><h3>NETWORK MARKETING</h3><p>CLIENT NETWORKS &#183; OUTREACH &#183; RETENTION</p></div>
+          <div class="prt-end"><span class="chip"><span class="sq"></span>ACTIVE</span></div>
         </div>
 
         <div class="prt reveal" data-hover>
           <span class="prt-id">PRT-03</span>
-          <div class="prt-body"><h3>WEB OPERATIONS</h3><p>HTML &#183; CSS &#183; JAVASCRIPT &#183; RESPONSIVE SYSTEMS</p></div>
+          <div class="prt-body"><h3>DIGITAL BUSINESS OPS</h3><p>ONLINE MARKETPLACE &#183; JAZZCASH &#183; EASYPAISA</p></div>
           <div class="prt-end"><span class="chip"><span class="sq"></span>ACTIVE</span></div>
         </div>
 
         <div class="prt reveal" data-hover>
           <span class="prt-id">PRT-04</span>
-          <div class="prt-body"><h3>DATA OPERATIONS</h3><p>SQL &#183; DATA MODELING &#183; DEBUGGING DISCIPLINE</p></div>
-          <div class="prt-end"><span class="chip"><span class="sq"></span>ACTIVE</span></div>
+          <div class="prt-body"><h3>SOFTWARE ENGINEERING CORE</h3><p>OOP &#183; DSA &#183; SDLC — AUST SEM-03</p></div>
+          <div class="prt-end"><span class="chip pak"><span class="sq g"></span>IN TRAINING</span></div>
         </div>
 
         <div class="prt reveal" data-hover>
           <span class="prt-id">PRT-05</span>
-          <div class="prt-body"><h3>VERSION CONTROL</h3><p>GIT &#183; BRANCHING &#183; CODE REVIEW PROTOCOL</p></div>
+          <div class="prt-body"><h3>AI FOUNDATIONS — &ldquo;AI FOR EVERYONE&rdquo;</h3><p>NAVTTC &#183; ML FUNDAMENTALS &#183; NEURAL NETWORKS &#183; AI ETHICS</p></div>
+          <div class="prt-end"><span class="chip pak"><span class="sq g blink"></span>IN TRAINING</span></div>
+        </div>
+
+        <div class="prt reveal" data-hover>
+          <span class="prt-id">PRT-06</span>
+          <div class="prt-body"><h3>COMPUTING &amp; IT</h3><p>3-YEAR DIPLOMA &#183; C.D.I ACADEMY</p></div>
           <div class="prt-end"><span class="chip"><span class="sq"></span>ACTIVE</span></div>
         </div>
+
+        <div class="prt reveal" data-hover>
+          <span class="prt-id">PRT-07</span>
+          <div class="prt-body"><h3>LANGUAGES</h3><p>URDU &#183; HINDKO &#183; ENGLISH &#183; PUNJABI</p></div>
+          <div class="prt-end"><span class="chip"><span class="sq"></span>ACTIVE</span></div>
+        </div>
+
+        <div class="prt reveal" data-hover>
+          <span class="prt-id">PRT-08</span>
+          <div class="prt-body"><h3>DARK PSYCHOLOGY DOCTRINE</h3><p>INFLUENCE &#183; MIND-READING &#183; MENTAL SELF-DEFENCE</p></div>
+          <div class="prt-end"><span class="chip live"><span class="sq blink"></span>IBS No.1</span></div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ======= 05 HONOR ROLL ======= -->
+  <section class="sec" id="honors">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-idx">[ 05 ]</span>
+        <div><h2 data-scramble>HONOR ROLL</h2><p class="sec-sub">GREEN FILE &#9733; PAKISTAN ZINDABAD — INSPIRATIONS OF THE SQUAD</p></div>
+        <span class="sec-meta">FILE 05 / 06</span>
+      </div>
+
+      <div class="nation reveal">
+        <div class="n-flag">
+          <svg viewBox="0 0 900 600" role="img" aria-label="Flag of the Islamic Republic of Pakistan">
+            <rect width="900" height="600" fill="#01411c"/>
+            <rect width="225" height="600" fill="#eceae6"/>
+            <circle cx="540" cy="300" r="130" fill="#eceae6"/>
+            <circle cx="572" cy="268" r="112" fill="#01411c"/>
+            <polygon points="658,134 668.8,167.1 703.7,167.2 675.5,187.7 686.2,220.8 658,200.4 629.8,220.8 640.5,187.7 612.3,167.2 647.2,167.1" fill="#eceae6"/>
+          </svg>
+          <span class="n-cap">FLAG OF THE ISLAMIC REPUBLIC OF PAKISTAN</span>
+        </div>
+        <div class="n-info">
+          <p class="n-kicker"><span class="sq g blink"></span>GREEN FILE // NATIONAL DOCTRINE</p>
+          <h3 class="n-title">REPRESENTING <span class="green">PAKISTAN</span></h3>
+          <p>Every operation of the Intelligence Black Squad is logged under the green flag — from the
+            hills of Nawanshehr, Abbottabad, to the national grid. The squad&rsquo;s discipline is
+            modelled on the institutions that serve this country: the <b>Government of
+            Pakistan</b> and the district command of Abbottabad.</p>
+          <div class="n-badges">
+            <div class="n-badge">
+              <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="Stylized state emblem — Government of Pakistan">
+                <circle cx="60" cy="58" r="44"/>
+                <path d="M74 40a16 16 0 1 0 0 32A20 20 0 0 1 74 40z" fill="currentColor" stroke="none"/>
+                <polygon points="86,31 88.5,38.6 96.5,38.6 90,43.3 92.5,50.9 86,46.2 79.5,50.9 82,43.3 75.5,38.6 83.5,38.6" fill="currentColor" stroke="none"/>
+                <path d="M24 108h72"/>
+              </svg>
+              <span>GOVERNMENT OF PAKISTAN<br/>STYLIZED STATE EMBLEM</span>
+            </div>
+            <div class="n-badge">
+              <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Deputy Commissioner Abbottabad badge">
+                <circle cx="60" cy="60" r="54"/>
+                <circle cx="60" cy="60" r="46" opacity=".45"/>
+                <path d="M60 26a12 12 0 1 0 0 24A15 15 0 0 1 60 26z" fill="currentColor" stroke="none"/>
+                <polygon points="78,24 80,30.2 86.6,30.2 81.2,34.1 83.3,40.3 78,36.4 72.7,40.3 74.8,34.1 69.4,30.2 76,30.2" fill="currentColor" stroke="none"/>
+                <text x="60" y="64" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" letter-spacing="3" fill="currentColor" stroke="none">DC</text>
+                <path d="M32 90l12-16 7 9 8-11 11 14 5-6 9 10"/>
+              </svg>
+              <span>DC OFFICE ABBOTTABAD<br/>INSPIRATION PROTOCOL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="honor-grid">
+        <article class="hcard featured reveal" data-hover>
+          <span class="hc-tag">01 — DC</span>
+          <svg class="hc-badge big" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Deputy Commissioner Abbottabad insignia">
+            <circle cx="60" cy="60" r="54"/>
+            <circle cx="60" cy="60" r="46" opacity=".45"/>
+            <path d="M60 26a12 12 0 1 0 0 24A15 15 0 0 1 60 26z" fill="currentColor" stroke="none"/>
+            <polygon points="78,24 80,30.2 86.6,30.2 81.2,34.1 83.3,40.3 78,36.4 72.7,40.3 74.8,34.1 69.4,30.2 76,30.2" fill="currentColor" stroke="none"/>
+            <text x="60" y="64" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" letter-spacing="3" fill="currentColor" stroke="none">DC</text>
+            <path d="M32 90l12-16 7 9 8-11 11 14 5-6 9 10"/>
+          </svg>
+          <h3>SARMAD SALEEM</h3>
+          <p class="hc-role">DEPUTY COMMISSIONER — ABBOTTABAD</p>
+          <p class="hc-note">District command, discipline and service to the people of Abbottabad.
+            Sir — your standard is the doctrine this squad trains by. Salutations from IBS.</p>
+        </article>
+
+        <article class="hcard reveal" data-hover>
+          <span class="hc-tag">02 — AC</span>
+          <svg class="hc-badge" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-label="Scales of justice">
+            <circle cx="50" cy="10" r="4"/>
+            <path d="M50 16v64"/>
+            <path d="M36 88h28"/>
+            <path d="M22 26h56"/>
+            <path d="M22 26l-10 22M22 26l10 22"/>
+            <path d="M6 48a16 16 0 0 0 32 0z"/>
+            <path d="M78 26l-10 22M78 26l10 22"/>
+            <path d="M62 48a16 16 0 0 0 32 0z"/>
+          </svg>
+          <h3>OFFICE OF THE ASSISTANT COMMISSIONER</h3>
+          <p class="hc-role">ASSISTANT COMMISSIONER — ABBOTTABAD</p>
+          <p class="hc-note">Justice and administration at the grassroots — proof that real authority
+            listens first and acts fair. A standing inspiration for how IBS treats people.</p>
+        </article>
+
+        <article class="hcard ignis reveal" data-hover>
+          <span class="hc-tag">03 — SPARK</span>
+          <svg class="hc-badge ignis" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.4" aria-label="Guiding star">
+            <circle cx="50" cy="50" r="34"/>
+            <path d="M50 16 L58 42 L84 50 L58 58 L50 84 L42 58 L16 50 L42 42 Z" fill="currentColor" stroke="none"/>
+          </svg>
+          <h3>A.K.</h3>
+          <p class="hc-role ignis">THE ORIGINAL SPARK — FIRST INSPIRATION</p>
+          <p class="hc-note">The name that started the journey — before diplomas, before doctrines.
+            Some names never make headlines; they make the person. Reserved with respect.</p>
+        </article>
+      </div>
+
+      <p class="honor-note reveal"><b>//</b> EMBLEMS RENDERED AS STYLIZED TRIBUTES — SWAP IN OFFICIAL LOGO ARTWORK WHERE AVAILABLE</p>
     </div>
   </section>
 
   <!-- ======= MARQUEE 2 ======= -->
   <div class="marquee rev" aria-hidden="true">
     <div class="mq-track">
-      <span class="mq-in"><span class="w-red">TRANSMISSIONS OPEN</span><span class="mq-star">&#9733;</span>SECURE LINE ACTIVE<span class="mq-star">&#9733;</span><span class="w-red">HASEEB UR REHMAN</span><span class="mq-star">&#9733;</span>IBS<span class="mq-star">&#9733;</span><span class="w-red">PAKISTAN</span><span class="mq-star">&#9733;</span></span>
-      <span class="mq-in"><span class="w-red">TRANSMISSIONS OPEN</span><span class="mq-star">&#9733;</span>SECURE LINE ACTIVE<span class="mq-star">&#9733;</span><span class="w-red">HASEEB UR REHMAN</span><span class="mq-star">&#9733;</span>IBS<span class="mq-star">&#9733;</span><span class="w-red">PAKISTAN</span><span class="mq-star">&#9733;</span></span>
+      <span class="mq-in"><span class="w-red">TRANSMISSIONS OPEN</span><span class="mq-star">&#9733;</span>WHATSAPP — 0332 3818881<span class="mq-star">&#9733;</span><span class="w-red">sardarhaseeburrehman25@gmail.com</span><span class="mq-star">&#9733;</span>TIKTOK — @sardarak.9<span class="mq-star">&#9733;</span><span class="w-green">PAKISTAN ZINDABAD</span><span class="mq-star">&#9733;</span></span>
+      <span class="mq-in"><span class="w-red">TRANSMISSIONS OPEN</span><span class="mq-star">&#9733;</span>WHATSAPP — 0332 3818881<span class="mq-star">&#9733;</span><span class="w-red">sardarhaseeburrehman25@gmail.com</span><span class="mq-star">&#9733;</span>TIKTOK — @sardarak.9<span class="mq-star">&#9733;</span><span class="w-green">PAKISTAN ZINDABAD</span><span class="mq-star">&#9733;</span></span>
     </div>
   </div>
 
-  <!-- ======= 04 TRANSMISSIONS ======= -->
+  <!-- ======= 06 TRANSMISSIONS ======= -->
   <section class="sec" id="transmit">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="sec-idx">[ 04 ]</span>
-        <div><h2 data-scramble>TRANSMISSIONS</h2><p class="sec-sub">CHANNEL 07 — ENCRYPTED — RESPONSE &le; 24H PKT</p></div>
-        <span class="sec-meta">FILE 04 / 04</span>
+        <span class="sec-idx">[ 06 ]</span>
+        <div><h2 data-scramble>TRANSMISSIONS</h2><p class="sec-sub">CHANNEL 07 — WHATSAPP &#183; GMAIL &#183; LINKEDIN &#183; TIKTOK — RESPONSE &le; 24H PKT</p></div>
+        <span class="sec-meta">FILE 06 / 06</span>
       </div>
 
       <div class="corners reveal">
@@ -606,38 +870,55 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
         <div class="contact-grid">
           <div>
             <h3 class="contact-big"><span>OPEN</span><span class="cw">SECURE</span><span>CHANNEL</span></h3>
-            <p class="contact-note">Recruiting, collaboration, or a call to arms for the squad —
-              all channels are monitored. Transmit a message and the operator responds within
-              one rotation of the sun over Pakistan.</p>
+            <p class="contact-note">
+              <b>WHATSAPP is the fastest line — 03323818881.</b> Gmail for formal transmissions,
+              LinkedIn for professional networking, TikTok for the public feed. Book orders,
+              collaborations or squad business — every channel is monitored, response within one
+              rotation of the sun over Pakistan.
+            </p>
           </div>
           <div>
             <div class="xlinks">
-              <!-- EDIT ME: replace with your real email & social URLs -->
-              <a class="xlink" href="mailto:haseeburrehman.ibs@gmail.com?subject=TRANSMISSION%20%2F%2F%20IBS%20SECURE%20LINE" data-cursor="SEND">
-                <span class="xl-i">01</span><span class="xl-k">EMAIL</span>
-                <span class="xl-v">haseeburrehman.ibs@gmail.com</span>
+              <a class="xlink" href="https://wa.me/923323818881?text=TRANSMISSION%20%2F%2F%20IBS%20SECURE%20LINE" target="_blank" rel="noopener" data-cursor="CHAT">
+                <span class="xl-i">01</span><span class="xl-k">WHATSAPP</span>
+                <span class="xl-v">03323818881 — +92 332 3818881</span>
                 <span class="xl-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
               </a>
-              <a class="xlink" href="https://github.com/haseeb-ur-rehman" target="_blank" rel="noopener" data-cursor="OPEN">
-                <span class="xl-i">02</span><span class="xl-k">GITHUB</span>
-                <span class="xl-v">github.com/haseeb-ur-rehman</span>
+              <a class="xlink" href="mailto:sardarhaseeburrehman25@gmail.com?subject=TRANSMISSION%20%2F%2F%20IBS%20SECURE%20LINE" data-cursor="SEND">
+                <span class="xl-i">02</span><span class="xl-k">GMAIL</span>
+                <span class="xl-v">sardarhaseeburrehman25@gmail.com</span>
                 <span class="xl-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
               </a>
-              <a class="xlink" href="https://www.linkedin.com/in/haseeb-ur-rehman" target="_blank" rel="noopener" data-cursor="OPEN">
-                <span class="xl-i">03</span><span class="xl-k">LINKEDIN</span>
-                <span class="xl-v">linkedin.com/in/haseeb-ur-rehman</span>
+              <a class="xlink" href="tel:+923323818881" data-cursor="DIAL">
+                <span class="xl-i">03</span><span class="xl-k">DIRECT CALL</span>
+                <span class="xl-v">0332-3818881</span>
+                <span class="xl-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </a>
+              <a class="xlink" href="https://www.linkedin.com/in/haseeburrehmansoftwareengineer" target="_blank" rel="noopener" data-cursor="OPEN">
+                <span class="xl-i">04</span><span class="xl-k">LINKEDIN</span>
+                <span class="xl-v">linkedin.com/in/haseeburrehmansoftwareengineer</span>
+                <span class="xl-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </a>
+              <a class="xlink" href="https://www.tiktok.com/@sardarak.9" target="_blank" rel="noopener" data-cursor="OPEN">
+                <span class="xl-i">05</span><span class="xl-k">TIKTOK</span>
+                <span class="xl-v">tiktok.com/@sardarak.9</span>
+                <span class="xl-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </a>
+              <a class="xlink" href="https://www.google.com/maps/search/?api=1&query=Nawanshehr,+Abbottabad" target="_blank" rel="noopener" data-cursor="MAP">
+                <span class="xl-i">06</span><span class="xl-k">BASE</span>
+                <span class="xl-v">NAWANSHEHR — ABBOTTABAD, KPK</span>
                 <span class="xl-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
               </a>
             </div>
-            <a class="btn btn-solid c-btn" href="mailto:haseeburrehman.ibs@gmail.com?subject=TRANSMISSION%20%2F%2F%20IBS%20SECURE%20LINE" data-hover>
-              TRANSMIT MESSAGE
+            <a class="btn btn-solid c-btn" href="https://wa.me/923323818881?text=TRANSMISSION%20%2F%2F%20IBS%20SECURE%20LINE" target="_blank" rel="noopener" data-hover>
+              OPEN WHATSAPP CHANNEL — 03323818881
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </div>
         </div>
         <div class="contact-meta">
+          <span>FASTEST LINE — WHATSAPP 03323818881</span>
           <span>ENCRYPTION: MARKHOR-CLASS</span>
-          <span>FINGERPRINT: MRKH-1BS-2025</span>
           <span class="red">ALL TRANSMISSIONS LOGGED</span>
         </div>
       </div>
@@ -658,18 +939,25 @@ footer{border-top:1px solid var(--line);padding:3.2rem 0 2rem;position:relative;
       </svg>
       <div><b>IBS</b><span>INTELLIGENCE BLACK SQUAD — EST. PAKISTAN</span></div>
     </div>
-    <div class="f-mid"><span class="pkt">--:--:-- PKT</span><span>33.6844&#176;N — 73.0479&#176;E</span></div>
+    <div class="f-mid">
+      <span class="pkt">--:--:-- PKT</span>
+      <span>0332-3818881 &#183; sardarhaseeburrehman25@gmail.com</span>
+      <span class="f-contact">TIKTOK @sardarak.9 &#183; LINKEDIN /haseeburrehmansoftwareengineer</span>
+    </div>
     <div class="f-flag">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M15 3A9 9 0 1 0 15 21A11 11 0 0 1 15 3Z" fill="currentColor"/>
-        <path d="M18.5 7.6l1 2.1 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3z" fill="currentColor"/>
+      <svg viewBox="0 0 900 600" role="img" aria-label="Flag of Pakistan">
+        <rect width="900" height="600" fill="#01411c"/>
+        <rect width="225" height="600" fill="#eceae6"/>
+        <circle cx="540" cy="300" r="130" fill="#eceae6"/>
+        <circle cx="572" cy="268" r="112" fill="#01411c"/>
+        <polygon points="658,134 668.8,167.1 703.7,167.2 675.5,187.7 686.2,220.8 658,200.4 629.8,220.8 640.5,187.7 612.3,167.2 647.2,167.1" fill="#eceae6"/>
       </svg>
       <span>PAKISTAN ZINDABAD</span>
     </div>
   </div>
   <div class="wrap f-bottom">
     <span>&copy; 2025 HASEEB UR REHMAN — INTELLIGENCE BLACK SQUAD</span>
-    <span>ALL PROTOCOLS RESERVED</span>
+    <span>GREEN FLAG PROTOCOL &#9733; GOVT OF PAKISTAN &#9733; DC ABBOTTABAD</span>
     <span class="red">EYES ONLY</span>
   </div>
 </footer>
@@ -694,7 +982,7 @@ addEventListener('scroll',()=>{
   nav.classList.toggle('scrolled', scrollY>30);
 },{passive:true});
 
-/* ---------- text scramble (decode effect) ---------- */
+/* ---------- text scramble ---------- */
 const GLYPHS = '█▓▒░<>/\\|#@$%&01';
 function scramble(el, dur=850){
   const orig = el.dataset.text ?? el.textContent;
@@ -728,7 +1016,7 @@ function countUp(el){
   requestAnimationFrame(f);
 }
 
-/* ---------- unified in-view observer ---------- */
+/* ---------- in-view observer ---------- */
 const io = new IntersectionObserver(entries=>{
   entries.forEach(en=>{
     if(!en.isIntersecting) return;
@@ -743,14 +1031,15 @@ const io = new IntersectionObserver(entries=>{
 },{threshold:.16, rootMargin:'0px 0px -6% 0px'});
  $$('.reveal').forEach(el=>io.observe(el));
 
-/* ---------- boot / access sequence ---------- */
+/* ---------- boot sequence ---------- */
 const boot = $('#boot'), bterm = $('#bterm'), stamp = $('#stamp'), hero = $('#hero');
 const LINES = [
-  '> IBS SECURE TERMINAL — BUILD 3.7.2 // MARKHOR',
+  '> IBS SECURE TERMINAL — BUILD 4.1.0 // MARKHOR',
   '> ESTABLISHING ENCRYPTED CHANNEL .......... OK',
-  '> LOADING MARKHOR PROTOCOL ................ OK',
+  '> UPLOADING GREEN-FLAG PROTOCOL ........... OK',
   '> VERIFYING VISITOR CLEARANCE ............. OK',
-  '> SUBJECT MATCH: HASEEB UR REHMAN // AGE 21',
+  '> SUBJECT: HASEEB UR REHMAN // ABBOTTABAD — PK',
+  '> SECURE LINES: WHATSAPP // GMAIL // LINKEDIN',
   '> CLEARANCE GRANTED: FOUNDER — LEVEL-5'
 ];
 let skipBoot = false, bootDone = false;
@@ -819,7 +1108,7 @@ if(FINE){
   });
 }
 
-/* ---------- radar blips wander ---------- */
+/* ---------- radar blips ---------- */
 const blips = $$('.radar .blip');
 if(blips.length) setInterval(()=>{
   blips.forEach(b=>{
